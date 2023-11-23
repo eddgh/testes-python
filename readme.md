@@ -1,0 +1,51 @@
+# Criando ambiente de testes em Python + Selenium WebDriver
+
+[Ref. YT para melhor entendimento - 'Utilizando o Selenium para testes de interface com Python 3 | Pytest | Pytest HTML | Front-end'](https://youtu.be/HPUrFjJJSQQ)
+
+- 01 - crie uma pasta
+- 02 - abra esta pasta no vscode
+- 03 - verifique se tem você tem o pipenv instalado digitando: 
+```
+pipenv --version
+```
+ caso não tenha, para instalar digite:
+```
+pip install pipenv
+```
+- 04 - instale o ambiente virtual com pipenv
+```
+pipenv install
+```
+isto criará os arquivos Pipfile e Pipfile.lock que são como uma espécie de package.json e vão gerenciar os pacotes que voce instalar com ` pipenv install nomedopacote`
+- 05 - digite: 
+```
+pipenv --python three
+```
+para que a versao 3 (three) do Python seja instalada quando quem baixar seu projeto rodar o comando ` pipenv install`
+- 05 - para saber mais comandos do pipenv digite `pipenv -h`
+- 06 - Instale suas dependencias com pipenv install:
+```
+pipenv install selenium webdriver-manager pytest pytest-html
+```
+### Preparando os testes
+- 01 - Crie uma pasta chamada `site` na raiz do seu projeto
+- 02 - Dentro da pasta `site` crie outra pasta, chamada `tests`
+- 03 - Dentro da pasta de tests crie seus testes, nomeando o arquivo iniciando o nome com `test_` e finalizando o nome com `.py` , por exemplo `test_random.py`
+- 04 - Dentro deste arquivo crie funções iniciando por `test_` , por exemplo: `def test_loginSuccess(self):`
+- 05 - ative o seu ambiente virtual digitando:
+```
+pipenv shell
+```
+- 06 - para fazer apenas o teste digite:
+```
+pytest site/
+```
+e assimm o pytest rastreará todos os seus testes presentes nessa pasta/subpastas
+- 07 - para fazer o teste e gerar um relatório do mesmo digite:
+```
+pytest site/ --html=report.html
+```
+isto criará um aqrquivo chamado `report.html` na raiz do seu projeto contendo os resultados.
+- 08 - para imprimir algo no log do  `Captured stdout call` de cada teste, inclua o comando `print()` no seu código.
+
+ [Veja mais informações importantes sobre a estruturação das pastas do projeto](readme2.md)
