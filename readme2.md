@@ -57,5 +57,5 @@ from selenium.webdriver.chrome.service import Service
 servico = Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=servico)
 ```
-
+[Assista esse video da HashTag treinamentos sobre o assunto e entenda melhor](https://youtu.be/2EIfXi2-vCI)
 
