@@ -41,9 +41,21 @@ Se quisesse **importar do arquivo `calcula.py` uma função chamada `divisao`** 
 
  [<< Voltar para "Criando ambiente de testes em Python + Selenium WebDriver" ](readme.md)
 
- >Para configurar o framework padrão de testes do Python, pressione **Ctrl+Shit+P**, depois digite 'tests', selecione a opção **Python: Configure Tests** e siga as intruções sugeridas. Depois disso você poderá rodar os testes clicando no botão de testes:  
+ >Para configurar o framework padrão de testes do Python, pressione **Ctrl+Shit+P**, depois digite 'tests', selecione a opção **Python: Configure Tests**. Escolha a opção **pytest framework**. Selecione o diretório que contém os testes (no caso desse projeto é a pasta 'site'). Depois disso você poderá rodar os testes clicando no botão de testes:  
  ![ícone de testes vscode](/imgs/vscode-test50-icon.PNG) na barra lateral esquerda do vscode e em segida no botão de play
  ![ícone de testes vscode](/imgs/vscode-testplay-icon.PNG) no canto superior esquerdo.<hr>
  
+### Bonus:
+
+Para rodar seus testes no selenium usando chrome sem se preocupar em ficar baixando o webdriver correto todas as vezes, coloque no seu arquivo python os seguintes comandos:
+
+```
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.service import Service
+
+servico = Service(ChromeDriverManager().install())
+driver = webdriver.Chrome(service=servico)
+```
 
 

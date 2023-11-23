@@ -1,3 +1,26 @@
+# Instruções após clonar o projeto:
+
+- 01 - depois de clonar, verifique se você tem o pipenv instalado:
+>pipenv --version
+
+- 02 - caso nao tenha:
+>pip install pipenv
+
+- 03 - crie o ambiente virtual na pasta do seu projeto
+>python -m venv.
+
+- 04 - ative o ambiente virtual
+>source Scripts/activate
+
+- 05 - instale as dependencias
+>pipenv install
+
+- 06 - Garanta que as principais dependências estejam instaladas:
+>pipenv install selenium webdriver-manager pytest pytest-html
+
+- 07 - Para configurar o framework padrão de testes do Python:
+>Pressione Ctrl+Shit+P, depois digite 'tests', selecione a opção 'Python: Configure Tests'. Escolha a opção 'pytest framework'. Selecione o diretório que contém os testes (no caso desse projeto é a pasta 'site'). Depois disso você poderá rodar os testes clicando no botão de testes (icone do frasco Balão de laboratório https://github.com/eddgh/testes-python/blob/472c796b1bddb32a8204d59ff14dab74809e668e/imgs/vscode-test-icon.PNG ) na barra lateral esquerda do vscode e em segida no botão de play https://github.com/eddgh/testes-python/blob/472c796b1bddb32a8204d59ff14dab74809e668e/imgs/vscode-testplay-icon.PNG no canto superior esquerdo.<hr> 
+
 # Criando ambiente de testes em Python + Selenium WebDriver
 
 [Ref. YT para melhor entendimento - 'Utilizando o Selenium para testes de interface com Python 3 | Pytest | Pytest HTML | Front-end'](https://youtu.be/HPUrFjJJSQQ)
